@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/3e2b3d0dcf.js" crossorigin="anonymous"></script>
+    <title>Комментарии</title>
+</head>
+<body>
+    <div class="container">
+        <div class="add-comments">
+            <h2 class="add-comments__title title">Написать комментарий</h2>
+            <form action="#" class="form" name="form" id="form" >
+                <label class="form__label">Ваше имя<input class="form__name invalid" type="text" name="name" autofocus></label>
+                <div class="error__name error"></div>
+                <label class="form__label">Текст комментария<textarea class="form__text invalid" name="comment" form="form"></textarea></label>
+                <div class="error__text error"></div>
+                <label class="form__label">Дата<input class="form__date" type="date" name="date"></label>
+                <input type="submit" class="form__btn" value="Отправить">
+            </form>
+        </div>
+        <div class="comments">
+            <h2 class="comments__title title">Комментарии</h2>
+        </div>
+        <template id="comment-template">
+            <div class="comments__item comment">
+                <p class="comment__name"></p>
+                <p class="comment__text"></p>
+                <p class="comment__time"></p>
+                <div class="comment__buttons">
+                    <button class="comment__btn trash"><img src="./img/delete.png" alt="Удалить" title="Удалить"></button>
+                    <button class="comment__btn like"><i class="fa-solid fa-heart "></i></button>
+                </div>
+            </div>
+        </template>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
+
