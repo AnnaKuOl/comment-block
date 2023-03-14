@@ -68,7 +68,7 @@ function formateDate(date){
     if(diffDay < 1){
         return `сегодня, ${todayTime.join(":")}`
     }else if (diffDay < 2) {
-        return `вчера, ${d.slice(3).join(":")}`
+        return `вчера, ${todayTime.join(":")}`
     }
     else{
         return `${d.slice(0, 3).join(".")} ${d.slice(3).join(":")}`
